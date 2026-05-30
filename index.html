@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КОНТУР — Системы контроля пространства</title>
+    <style>
+        /* Основные цвета бренда */
+        :root {
+            --primary-color: #fff; /* Белый текст */
+            --accent-color: #007bff; /* Синий акцент */
+            --bg-color: #000; /* Черный фон */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Шапка */
+        header {
+            background: var(--bg-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 900;
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Главный блок */
+        .hero {
+            text-align: center;
+            padding: 100px 0 50px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Услуги */
+        .services {
+            padding: 50px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,123,255,0.3);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Контакты */
+        .contact-section {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Подвал */
+        footer {
+            background: #1a1a1a;
+            color: #777;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/60x60?text=LOGO" alt="Логотип КОНТУР">
+                <span>КОНТУР</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h1>СИСТЕМЫ КОНТРОЛЯ ПРОСТРАНСТВА</h1>
+            <p>Профессиональная установка видеонаблюдения, домофонов и автоматики ворот в Дагестане.</p>
+            <a href="#services" class="btn">Посмотреть услуги</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 style="color: var(--accent-color); text-align: center; margin-bottom: 30px;">Наши направления</h2>
+            <div class="service-grid">
+                
+                <div class="service-card">
+                    <i class="service-icon" style="font-size: 48px;">🎯</i>
+                    <h3 class="service-title">Видеонаблюдение</h3>
+                    <p>Уличные и внутренние камеры, запись в облако, детекция движения.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="service-icon" style="font-size: 48px;">🔑</i>
+                    <h3 class="service-title">Домофоны</h3>
+                    <p>Видеодомофоны, электромагнитные замки, интеграция с мобильным приложением.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="service-icon" style="font-size: 48px;">🚪</i>
+                    <h3 class="service-title">Автоматика ворот</h3>
+                    <p>Приводы для распашных и откатных ворот, пульты, фотоэлементы безопасности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Свяжитесь с нами</h2>
+                <p>📞 Телефон: <a href="tel:+79640203585" style="color: var(--bg-color); text-decoration: none;">+7 (964) 020-35-85</a></p>
+                <p>✉️ WhatsApp: <a href="https://wa.me/79640203585" style="color: var(--bg-color); text-decoration: none;">+7 (964) 020-35-85</a></p>
+                <p>📧 Email: <a href="mailto:kurbanov@kontur-systems.ru" style="color: var(--bg-color); text-decoration: none;">kurbanov@kontur-systems.ru</a></p>
+                <p>📸 Instagram: <a href="https://www.instagram.com/kontur.systems" style="color: var(--bg-color); text-decoration: none;">@kontur.systems</a></p>
+                <p>🌐 Сайт: <a href="https://konturdag.systems" style="color: var(--bg-color); text-decoration: none;">konturdag.systems</a></p>
+                
+                <a href="tel:+796402
